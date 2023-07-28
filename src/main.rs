@@ -101,7 +101,7 @@ async fn metrics(State(app_state): State<Arc<AppState>>) -> Result<String, AppEr
     }
 
     if let Some(pressure) = pressure {
-        metrics::gauge!("pressure", f64::from(pressure));
+        metrics::gauge!("pressure", f64::from(pressure / 100.0));
     }
 
     if let Some(humidity) = humidity {
