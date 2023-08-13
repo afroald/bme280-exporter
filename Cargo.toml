@@ -6,14 +6,14 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-anyhow = "1.0.72"
-axum = "0.6.19"
+anyhow = "1.0.75"
+axum = "0.6.20"
 bme280-rs = "0.1.0"
-clap = { version = "4.3.19", features = ["derive"] }
+clap = { version = "4.4.3", features = ["derive"] }
 linux-embedded-hal = "0.3.2"
 metrics = "0.21.1"
 metrics-exporter-prometheus = { version = "0.12.1", default-features = false, features = ["async-runtime"] }
 prometheus = "0.13.3"
-tokio = { version = "1.29.1", features = ["macros", "rt-multi-thread"] }
+tokio = { version = "1.32.0", features = ["macros", "rt-multi-thread"] }
 tracing = "0.1.37"
 tracing-subscriber = "0.3.17"
