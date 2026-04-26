@@ -84,6 +84,7 @@ async fn main() {
         .route("/metrics", get(metrics))
         .with_state(Arc::new(app_state));
 
+    info!("starting server");
     axum::Server::bind(&SocketAddr::new(IpAddr::V4(cli.host), cli.port))
         .serve(app.into_make_service())
         .await
